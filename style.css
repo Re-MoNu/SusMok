@@ -2,9 +2,18 @@ body {
     background-color: darkslategray;
     display: flex;
     justify-content: center;
+    text-align: center;
 }
 
 canvas {
     background-color: darkblue;
     border: 10px blue solid;
+    margin-top: 150px;
+}
+
+#turn {
+    position: absolute;
+    color: lime;
+    font-size: 64px;
+    margin-top: 40px;
 }

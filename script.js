@@ -1,5 +1,6 @@
 let $canvas = document.getElementById("board");
 let ctx = $canvas.getContext('2d');
+let turnDisplay = document.getElementById("turn");
 let game = [
     [0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0],
@@ -96,7 +97,6 @@ function phys() {
     }
 
     if (downPressed) {
-
         downPressed = false;
         for (i = 4; i >= 0; i--) {
             if (game[i][sel] == 0) {
@@ -106,13 +106,61 @@ function phys() {
                 switch (RedTurn) {
                     case true:
                         game[i][sel] = 2;
+                        turnDisplay.innerText = "Yellow's Turn!";
+                        if (winCheck(i, sel, 2)) {
+                            drawBoard();
+                            turnDisplay.innerText = "Red Wins!";
+                            clearInterval(repeat);
+                        }
+                        winCheck(i, sel, 2);
                         break;
                     case false:
                         game[i][sel] = 1;
+                        turnDisplay.innerText = "Red's Turn!";
+                        if (winCheck(i, sel, 1)) {
+                            drawBoard();
+                            turnDisplay.innerText = "Yellow Wins!";
+                            clearInterval(repeat);
+                        }
                         break;
                 }
                 break;
             }
         }
     }
+}
+
+function winCheck(x, y, c) {
+    let i, check = true;
+    for (i = 1; i < 4; i++) {
+        if (game[x + i][y] != c) {
+            check = false;
+            break;
+        }
+    }
+    if (check) return true;
+    check = true;
+    for (i = 1; i < 4; i++) {
+        if (game[x - i][y] != c) {
+            check = false;
+            break;
+        }
+    }
+    if (check) return true;
+    check = true;
+    for (i = 1; i < 4; i++) {
+        if (game[x][y + i] != c) {
+            check = false;
+            break;
+        }
+    }
+    if (check) return true;
+    check = true;
+    for (i = 1; i < 4; i++) {
+        if (game[x][y - i] != c) {
+            check = false;
+            break;
+        }
+    }
+    return check;
 }
