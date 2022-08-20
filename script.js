@@ -164,3 +164,9 @@ function winCheck(x, y, c) {
     }
     return check;
 }
+
+function displayHelp() {
+    alert("좌우 화살표 키로 커서를 옮기세요!");
+    alert("스페이스바를 누르면 공이 떨어집니다!");
+    alert("세로 혹은 가로로 4줄을 만들면 승리!")
+}

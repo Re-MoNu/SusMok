@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=DynaPuff&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Silkscreen&display=swap');
+body {
+    font-family: 'DynaPuff', cursive;
+    background-color: darkblue;
+    text-align: center;
+}
+
+.span {
+    color: darkblue;
+    font-size: 36px;
+    transition: 500ms
+}
+
+.titleL {
+    margin-bottom: 48px;
+    font-size: 88px;
+    color: white;
+}
+
+a {
+    font-family: 'Silkscreen', cursive;
+    color: purple;
+    text-decoration: none;
+    transition: 500ms;
+    font-size: 36px;
+}
+.title {
+    color: white;
+    transition: 200ms;
+}
+.title:hover {
+    color: orange;
+    -webkit-text-stroke: 5px black;
+}
+.span:hover {
+    color: lime;
+    font-size: 56px;
+}
+
+a:hover {
+    font-size: 56px;
+    color: yellow;
+}
