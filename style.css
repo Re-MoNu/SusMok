@@ -8,6 +8,7 @@ body {
 }
 
 canvas {
+    z-index: -1;
     background-color: darkblue;
     border: 10px blue solid;
     margin-top: 150px;
@@ -16,7 +17,8 @@ canvas {
 #turn {
     transition: 500ms;
     position: absolute;
-    color: limegreen;
+    color: red;
+    -webkit-text-stroke: 2px yellow;
     font-size: 64px;
     margin-top: 40px;
 }
@@ -38,8 +40,20 @@ canvas {
     top:16px;
 }
 .move {
-    position: static;
+    position: absolute;
     height: 100px;
     width: 100px;
     margin-top: 500px;
+}
+#left {
+    left: 400px;
+    font-size: 48px;
+}
+#right {
+    right:400px;
+    font-size: 48px;
+}
+#down {
+    right:250px;
+    font-size: 36px;
 }

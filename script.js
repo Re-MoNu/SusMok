@@ -111,8 +111,7 @@ function phys() {
                         turnDisplay.style.webkitTextStroke = "2px red";
                         if (winCheck(i, sel, 2)) {
                             drawBoard();
-                            turnDisplay.style.color = "lime";
-                            turnDisplay.style.webkitTextStroke = "limegreen";
+                            turnDisplay.style.color = "white";
                             turnDisplay.innerText = "P1 Wins!";
                             clearInterval(repeat);
                         }
@@ -125,8 +124,7 @@ function phys() {
                         turnDisplay.style.webkitTextStroke = "2px yellow";
                         if (winCheck(i, sel, 1)) {
                             drawBoard();
-                            turnDisplay.style.color = "lime";
-                            turnDisplay.style.webkitTextStroke = "limegreen";
+                            turnDisplay.style.color = "white";
                             turnDisplay.innerText = "P2 Wins!";
                             clearInterval(repeat);
                         }
