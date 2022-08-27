@@ -71,15 +71,15 @@ function keyDown(e) { //left 37, right 39
     // } else if (e.keyCode == 37) {
     //     leftPressed = true;
     // }
-    if (e.keyCode == 32) {
+    if (e.keyCode == 32 || e==32) {
         downPressed = true;
     }
 }
 
 function keyUp(e) {
-    if (e.keyCode == 39) {
+    if (e.keyCode == 39 || e==39) {
         rightPressed = true;
-    } else if (e.keyCode == 37) {
+    } else if (e.keyCode == 37 || e==37) {
         leftPressed = true;
     }
 }
@@ -106,20 +106,28 @@ function phys() {
                 switch (RedTurn) {
                     case true:
                         game[i][sel] = 2;
-                        turnDisplay.innerText = "Yellow's Turn!";
+                        turnDisplay.innerText = "P2's Turn!";
+                        turnDisplay.style.color = "yellow";
+                        turnDisplay.style.webkitTextStroke = "2px red";
                         if (winCheck(i, sel, 2)) {
                             drawBoard();
-                            turnDisplay.innerText = "Red Wins!";
+                            turnDisplay.style.color = "lime";
+                            turnDisplay.style.webkitTextStroke = "limegreen";
+                            turnDisplay.innerText = "P1 Wins!";
                             clearInterval(repeat);
                         }
                         winCheck(i, sel, 2);
                         break;
                     case false:
                         game[i][sel] = 1;
-                        turnDisplay.innerText = "Red's Turn!";
+                        turnDisplay.innerText = "P1's Turn!";
+                        turnDisplay.style.color = "red";
+                        turnDisplay.style.webkitTextStroke = "2px yellow";
                         if (winCheck(i, sel, 1)) {
                             drawBoard();
-                            turnDisplay.innerText = "Yellow Wins!";
+                            turnDisplay.style.color = "lime";
+                            turnDisplay.style.webkitTextStroke = "limegreen";
+                            turnDisplay.innerText = "P2 Wins!";
                             clearInterval(repeat);
                         }
                         break;
@@ -169,4 +177,11 @@ function displayHelp() {
     alert("좌우 화살표 키로 커서를 옮기세요!");
     alert("스페이스바를 누르면 공이 떨어집니다!");
     alert("세로 혹은 가로로 4줄을 만들면 승리!")
+}
+function back() {
+    if(confirm("Are you sure? your progress will be lost!") == true){
+        console.log("pass");
+        close();
+        window.open("index.html");
+    }
 }

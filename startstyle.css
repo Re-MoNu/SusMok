@@ -7,7 +7,7 @@ body {
 }
 
 .span {
-    color: darkblue;
+    color: purple;
     font-size: 36px;
     transition: 500ms
 }
@@ -15,22 +15,20 @@ body {
 .titleL {
     margin-bottom: 48px;
     font-size: 88px;
-    color: white;
+    color: lightgrey;
 }
 
 a {
     font-family: 'Silkscreen', cursive;
-    color: purple;
     text-decoration: none;
     transition: 500ms;
     font-size: 36px;
 }
 .title {
-    color: white;
     transition: 200ms;
 }
 .title:hover {
-    color: orange;
+    color: white;
     -webkit-text-stroke: 5px black;
 }
 .span:hover {

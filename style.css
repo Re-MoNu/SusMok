@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Silkscreen&display=swap');
 body {
     font-family: 'Silkscreen', cursive;
-    background-color: darkslategray;
+    background-color: darkblue;
     display: flex;
     justify-content: center;
     text-align: center;
@@ -14,18 +14,32 @@ canvas {
 }
 
 #turn {
+    transition: 500ms;
     position: absolute;
-    color: lime;
+    color: limegreen;
     font-size: 64px;
     margin-top: 40px;
 }
 
-button {
+.interact {
     position: absolute;
     color: yellow;
     background-color: brown;
-    left: 24px;
-    top: 16px;
+    
     font-size: 32px;
     font-family: 'Silkscreen', cursive;
+}
+#help {
+    left: 24px;
+    top: 80px;
+}
+#back {
+    left:24px;
+    top:16px;
+}
+.move {
+    position: static;
+    height: 100px;
+    width: 100px;
+    margin-top: 500px;
 }
