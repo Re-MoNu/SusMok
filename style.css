@@ -13,23 +13,36 @@ canvas {
     border: 10px blue solid;
     margin-top: 150px;
 }
-
-#turn {
-    transition: 500ms;
-    position: absolute;
-    color: red;
-    -webkit-text-stroke: 2px yellow;
-    font-size: 64px;
-    margin-top: 40px;
+@media only screen and (min-width: 768px) {
+    #turn {
+        transition: 500ms;
+        position: absolute;
+        color: red;
+        -webkit-text-stroke: 2px yellow;
+        font-size: 64px;
+        margin-top: 40px;
+    }
 }
+@media only screen and (max-width: 767px) {
+    #turn {
+        transition: 500ms;
+        position: absolute;
+        color: red;
+        -webkit-text-stroke: 2px yellow;
+        font-size: 56px;
+        margin-top: 7px;
+    }
+}
+@media only screen and (min-width: 768px) {
+    .interact {
+        position: absolute;
+        color: yellow;
+        background-color: brown;
+        
+        font-size: 32px;
+        font-family: 'Silkscreen', cursive;
+    }
 
-.interact {
-    position: absolute;
-    color: yellow;
-    background-color: brown;
-    
-    font-size: 32px;
-    font-family: 'Silkscreen', cursive;
 }
 #help {
     left: 24px;
@@ -41,19 +54,19 @@ canvas {
 }
 .move {
     position: absolute;
-    height: 100px;
-    width: 100px;
+    height: 50px;
+    width: 50px;
     margin-top: 500px;
 }
 #left {
-    left: 400px;
-    font-size: 48px;
+    left: 50px;
+    font-size: 32px;
 }
 #right {
-    right:400px;
-    font-size: 48px;
+    right:200px;
+    font-size: 32px;
 }
 #down {
-    right:250px;
-    font-size: 36px;
+    right:125px;
+    font-size: 16px;
 }
